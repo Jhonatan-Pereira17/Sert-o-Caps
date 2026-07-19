@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { SiteSettings } from "@/types";
 
-export default function Navbar() {
+export default function Navbar({ settings }: { settings?: SiteSettings }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 h-20">
         <span className="font-display text-2xl text-couro-950">
-          Sertão <span className="text-ferrugem">Caps</span>
+        {settings?.nomeEmpresa || "Sertão Caps"}
         </span>
         <a
         
