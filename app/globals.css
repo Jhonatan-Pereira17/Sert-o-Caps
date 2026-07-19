@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* tons de bege/areia — fundo geral do site */
+  --color-areia-50: #FEFCF9;
+  --color-areia-100: #F8F1E4;
+  --color-areia-200: #EFE2C8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* tons de marrom/couro — texto, bordas, elementos escuros */
+  --color-couro-200: #C7A97B;
+  --color-couro-400: #8B5E3C;
+  --color-couro-600: #6B4226;
+  --color-couro-800: #4A2E1B;
+  --color-couro-950: #241B14;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* branco quente pra cards */
+  --color-osso: #FFFDF9;
+
+  /* acento — usar só em botões/CTA */
+  --color-ferrugem: #B4501B;
+  --color-ferrugem-dark: #8F3D14;
+  --color-ferrugem-light: #D0692A;
+
+  /* fontes (vamos configurar no passo 3.2) */
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-work-sans);
+  --font-stamp: var(--font-space-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-areia-100);
+  color: var(--color-couro-950);
 }
