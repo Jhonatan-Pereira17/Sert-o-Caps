@@ -4,6 +4,7 @@ export interface SiteSettings {
   nomeEmpresa?: string;
   whatsapp?: string;
   email?: string;
+  indicadores?: { numero: string; legenda: string }[];
 }
 
 export interface Hero {
@@ -12,4 +13,9 @@ export interface Hero {
   midia?: Image;
   textoBotaoPrimario?: string;
   textoBotaoSecundario?: string;
+}
+
+export interface About {
+  texto?: string;
+  fotos?: Image[];
 }

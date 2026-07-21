@@ -1,14 +1,20 @@
 import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import About from "@/components/About";
+import { client } from "@/lib/sanity/client";
+import { siteSettingsQuery, heroQuery, aboutQuery } from "@/lib/sanity/queries";
 
-export default function Home() {
+export default async function Home() {
+  const settings = await client.fetch(siteSettingsQuery);
+  const hero = await client.fetch(heroQuery);
+  const about = await client.fetch(aboutQuery);
+
   return (
     <>
-      <Navbar />
+      <Navbar settings={settings} />
       <main>
-        <section id="inicio" className="h-screen flex items-center justify-center bg-couro-950">
-          <h1 className="font-display text-5xl text-osso">Hero</h1>
-        </section>
-        <section id="empresa" className="py-28 text-center">Sobre a empresa</section>
+        <Hero hero={hero} />
+        <About about={about} settings={settings} />
         <section id="catalogo" className="py-28 text-center bg-areia-50">Catálogo</section>
         <section id="processo" className="py-28 text-center">Processo</section>
         <section id="galeria" className="py-28 text-center bg-areia-50">Galeria</section>
