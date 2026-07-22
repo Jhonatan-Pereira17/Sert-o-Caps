@@ -24,3 +24,7 @@ export const productsQuery = groq`*[_type == "product"]{
 export const processStepsQuery = groq`*[_type == "processStep"] | order(numero asc){
   _id, numero, titulo, descricao, icone
 }`;
+
+export const galleryQuery = groq`*[_type == "galleryImage"]{
+  _id, imagem, legenda
+}`;

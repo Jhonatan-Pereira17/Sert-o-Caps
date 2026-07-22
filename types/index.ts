@@ -41,3 +41,9 @@ export interface ProcessStep {
   descricao?: string;
   icone?: string;
 }
+
+export interface GalleryImage {
+  _id: string;
+  imagem: Image;
+  legenda?: string;
+}
