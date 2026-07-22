@@ -1,13 +1,22 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import About from "@/components/About";
+import Catalog from "@/components/Catalog";
 import { client } from "@/lib/sanity/client";
-import { siteSettingsQuery, heroQuery, aboutQuery } from "@/lib/sanity/queries";
+import {
+  siteSettingsQuery,
+  heroQuery,
+  aboutQuery,
+  categoriesQuery,
+  productsQuery,
+} from "@/lib/sanity/queries";
 
 export default async function Home() {
   const settings = await client.fetch(siteSettingsQuery);
   const hero = await client.fetch(heroQuery);
   const about = await client.fetch(aboutQuery);
+  const categories = await client.fetch(categoriesQuery);
+  const products = await client.fetch(productsQuery);
 
   return (
     <>
@@ -15,7 +24,7 @@ export default async function Home() {
       <main>
         <Hero hero={hero} />
         <About about={about} settings={settings} />
-        <section id="catalogo" className="py-28 text-center bg-areia-50">Catálogo</section>
+        <Catalog categories={categories} products={products} />
         <section id="processo" className="py-28 text-center">Processo</section>
         <section id="galeria" className="py-28 text-center bg-areia-50">Galeria</section>
         <section id="videos" className="py-28 text-center">Vídeos</section>

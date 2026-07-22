@@ -19,3 +19,17 @@ export interface About {
   texto?: string;
   fotos?: Image[];
 }
+
+export interface Category {
+  _id: string;
+  nome: string;
+  slug: string;
+}
+
+export interface Product {
+  _id: string;
+  nome: string;
+  descricao?: string;
+  imagem: Image;
+  categoria?: { nome: string; slug: string };
+}
