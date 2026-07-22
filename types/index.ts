@@ -33,3 +33,11 @@ export interface Product {
   imagem: Image;
   categoria?: { nome: string; slug: string };
 }
+
+export interface ProcessStep {
+  _id: string;
+  numero: number;
+  titulo?: string;
+  descricao?: string;
+  icone?: string;
+}

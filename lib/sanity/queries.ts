@@ -20,3 +20,7 @@ export const productsQuery = groq`*[_type == "product"]{
   _id, nome, descricao, imagem,
   "categoria": categoria->{ nome, "slug": slug.current }
 }`;
+
+export const processStepsQuery = groq`*[_type == "processStep"] | order(numero asc){
+  _id, numero, titulo, descricao, icone
+}`;
