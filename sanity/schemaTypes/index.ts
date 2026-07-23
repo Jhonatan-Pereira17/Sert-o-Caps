@@ -5,5 +5,6 @@ import category from "./category";
 import product from "./product";
 import processStep from "./processStep";
 import galleryImage from "./galleryImage";
+import differential from "./differential";
 
-export const schemaTypes = [siteSettings, hero, about, category, product, processStep, galleryImage];
+export const schemaTypes = [siteSettings, hero, about, category, product, processStep, galleryImage, differential];

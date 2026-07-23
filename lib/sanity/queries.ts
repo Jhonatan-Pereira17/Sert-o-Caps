@@ -28,3 +28,7 @@ export const processStepsQuery = groq`*[_type == "processStep"] | order(numero a
 export const galleryQuery = groq`*[_type == "galleryImage"]{
   _id, imagem, legenda
 }`;
+
+export const differentialsQuery = groq`*[_type == "differential"]{
+  _id, titulo, icone
+}`;

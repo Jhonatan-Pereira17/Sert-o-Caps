@@ -47,3 +47,9 @@ export interface GalleryImage {
   imagem: Image;
   legenda?: string;
 }
+
+export interface Differential {
+  _id: string;
+  titulo: string;
+  icone?: string;
+}
