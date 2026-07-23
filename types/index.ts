@@ -53,3 +53,11 @@ export interface Differential {
   titulo: string;
   icone?: string;
 }
+
+export interface Video {
+  _id: string;
+  titulo?: string;
+  capa?: Image;
+  videoUrl?: string;
+  arquivoUrl?: string;
+}

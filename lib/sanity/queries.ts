@@ -32,3 +32,8 @@ export const galleryQuery = groq`*[_type == "galleryImage"]{
 export const differentialsQuery = groq`*[_type == "differential"]{
   _id, titulo, icone
 }`;
+
+export const videosQuery = groq`*[_type == "video"]{
+  _id, titulo, capa, videoUrl,
+  "arquivoUrl": arquivo.asset->url
+}`;

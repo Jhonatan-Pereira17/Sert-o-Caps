@@ -30,7 +30,7 @@ export default function Differentials({ items }: { items: Differential[] }) {
             return (
               <ScrollReveal key={item._id}>
                 <div className="flex items-center gap-4 rounded-2xl border border-osso/10 bg-osso/5 p-6">
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-ferrugem/15 text-ferrugem-light">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ferrugem/15 text-ferrugem-light">
                     <Icone size={20} />
                   </div>
                   <span className="font-display text-lg text-osso">{item.titulo}</span>
