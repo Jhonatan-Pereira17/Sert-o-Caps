@@ -7,5 +7,6 @@ import processStep from "./processStep";
 import galleryImage from "./galleryImage";
 import differential from "./differential";
 import video from "./video";
+import testimonial from "./testimonial";
 
-export const schemaTypes = [siteSettings, hero, about, category, product, processStep, galleryImage, differential, video];
+export const schemaTypes = [siteSettings, hero, about, category, product, processStep, galleryImage, differential, video, testimonial];

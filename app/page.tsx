@@ -6,6 +6,7 @@ import Process from "@/components/Process";
 import Differentials from "@/components/Differentials";
 import Gallery from "@/components/Gallery";
 import Videos from "@/components/Videos";
+import Testimonials from "@/components/Testimonial";
 import { client } from "@/lib/sanity/client";
 import {
   siteSettingsQuery,
@@ -17,6 +18,7 @@ import {
   differentialsQuery,
   galleryQuery,
   videosQuery,
+  testimonialsQuery,
 } from "@/lib/sanity/queries";
 
 export default async function Home() {
@@ -29,7 +31,7 @@ export default async function Home() {
   const differentials = await client.fetch(differentialsQuery);
   const gallery = await client.fetch(galleryQuery);
   const videos = await client.fetch(videosQuery);
-
+  const testimonial = await client.fetch(testimonialsQuery);
   return (
     <>
       <Navbar settings={settings} />
@@ -41,6 +43,7 @@ export default async function Home() {
         <Differentials items={differentials} />
         <Gallery imagens={gallery} />
         <Videos videos={videos} />
+        <Testimonials items={testimonial} />
         <section id="depoimentos" className="py-28 text-center bg-areia-50">Depoimentos</section>
         <section id="faq" className="py-28 text-center">FAQ</section>
         <section id="contato" className="py-28 text-center bg-areia-50">Contato</section>

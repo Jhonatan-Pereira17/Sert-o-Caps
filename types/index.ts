@@ -61,3 +61,12 @@ export interface Video {
   videoUrl?: string;
   arquivoUrl?: string;
 }
+
+export interface Testimonial {
+  _id: string;
+  nomeCliente: string;
+  empresa?: string;
+  foto?: Image;
+  texto?: string;
+  nota?: number;
+}

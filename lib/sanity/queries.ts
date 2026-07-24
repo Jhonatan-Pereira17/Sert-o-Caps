@@ -37,3 +37,7 @@ export const videosQuery = groq`*[_type == "video"]{
   _id, titulo, capa, videoUrl,
   "arquivoUrl": arquivo.asset->url
 }`;
+
+export const testimonialsQuery = groq`*[_type == "testimonial"]{
+  _id, nomeCliente, empresa, foto, texto, nota
+}`;
