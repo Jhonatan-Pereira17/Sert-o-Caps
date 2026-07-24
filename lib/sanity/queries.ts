@@ -41,3 +41,7 @@ export const videosQuery = groq`*[_type == "video"]{
 export const testimonialsQuery = groq`*[_type == "testimonial"]{
   _id, nomeCliente, empresa, foto, texto, nota
 }`;
+
+export const faqQuery = groq`*[_type == "faq"] | order(ordem asc){
+  _id, pergunta, resposta
+}`;

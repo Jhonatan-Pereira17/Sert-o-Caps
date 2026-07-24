@@ -70,3 +70,9 @@ export interface Testimonial {
   texto?: string;
   nota?: number;
 }
+
+export interface Faq {
+  _id: string;
+  pergunta: string;
+  resposta?: string;
+}
